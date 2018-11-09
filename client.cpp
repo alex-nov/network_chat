@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 			break;
 		}
 	}
-	strncpy(c_time, MINIBUFSIZE, i);
+	strncpy(c_time, buff, i);
 	timeout = atoi( static_cast<char*>(c_time));
 	strcpy(word, buff + i +1);
 
