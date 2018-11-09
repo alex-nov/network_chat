@@ -29,15 +29,14 @@ int main(int argc, char *argv[])
 	Socket *cl_socket = new Socket();
 
 	//Если порт не указан - используем стандартный
-	if(argc >= 3)
+	if(argc >= 2)
 	{
-		serv_addr = std::string(argv[1]);
-		pport = atoi(argv[2]);
-	}
-	else if( argc == 2)
-	{
-		serv_addr = std::string(std_addr);
 		pport = atoi(argv[1]);
+
+		if( argc >= 3)
+			serv_addr = std::string(argv[2]);
+		else
+			serv_addr = std::string(std_addr);
 	}
 	else
 	{
